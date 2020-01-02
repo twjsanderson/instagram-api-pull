@@ -5,10 +5,12 @@ class App extends React.Component {
     super(props);
     this.state = {
       pictures: [],
-      accountName: 'twjsanderson'
+      accountName: ''
     };
   }
-  
+
+  // add account name above to state
+
   componentDidMount() {
     fetch(`https://www.instagram.com/${this.state.accountName}/?__a=1`)
     .then(results => {
